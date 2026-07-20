@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Cloudcake\Components\IconPickerIcons\Forms\Components;
+namespace Cloudcake\Components\IconPicker\Forms\Components;
 
 use Closure;
 use Filament\Forms\Components\Field;
-use Cloudcake\Components\IconPickerIcons\IconSetManager;
+use Cloudcake\Components\IconPicker\IconSetManager;
 
 class IconPicker extends Field
 {
-    protected string $view = 'toolkit::forms.components.icon-picker';
+    protected string $view = 'cloudcake-components::forms.components.icon-picker';
     protected array|Closure|null $allowedSets = null;
     protected string|Closure|null $placeholder = null;
     protected bool|Closure $searchable = true;
@@ -20,7 +20,7 @@ class IconPicker extends Field
     {
         parent::setUp();
 
-        $this->placeholder(fn (): string => __('toolkit::icon-picker.placeholder'));
+        $this->placeholder(fn (): string => __('cloudcake-components::icon-picker.placeholder'));
     }
 
     public function modalSize(string|Closure|null $size): static
@@ -131,6 +131,6 @@ class IconPicker extends Field
 
     public function getIconsEndpoint(): string
     {
-        return route('toolkit.icons');
+        return route('cloudcake.icons');
     }
 }

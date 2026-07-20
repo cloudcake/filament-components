@@ -37,23 +37,13 @@ class Components implements Plugin
      */
     public function register(Panel $panel): void
     {
-        $this->registerComponents($panel);
+        $panel->assets([
+            Css::make('cloudcake-iconpicker-css', __DIR__ . '/../resources/dist/css/icon-picker.css'),
+            Js::make('cloudcake-iconpicker-js', __DIR__ . '/../resources/dist/js/icon-picker.js'),
+        ]);
     }
 
     public function boot(Panel $panel): void
     {
-    }
-
-    private function registerComponents(Panel $panel): static
-    {
-        $panel->assets([
-            Css::make('cloudcake-components-css', __DIR__ . '/../resources/dist/css/components.css'),
-        ]);
-
-        $panel->assets([
-            Js::make('cloudcake-iconpicker', __DIR__ . '/../resources/dist/js/icon-picker.js'),
-        ]);
-
-        return $this;
     }
 }

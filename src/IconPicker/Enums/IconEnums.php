@@ -1,6 +1,6 @@
 <?php
 
-namespace Cloudcake\Components\IconPickerIcons\Enums;
+namespace Cloudcake\Components\IconPicker\Enums;
 
 use Illuminate\Support\Str;
 

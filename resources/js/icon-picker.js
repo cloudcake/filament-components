@@ -67,7 +67,7 @@ export default function iconPicker({
 
             // Focus search input
             this.$nextTick(() => {
-                const searchInput = document.querySelector('.toolkit-icons-modal input[type="text"]');
+                const searchInput = document.querySelector('.cloudcake-icons-modal input[type="text"]');
                 if (searchInput) {
                     searchInput.focus();
                 }
@@ -192,7 +192,7 @@ export default function iconPicker({
             try {
                 // Try to find the icon in the DOM (Filament renders blade icons)
                 // Or use a simple fetch approach
-                const response = await fetch(`/toolkit-icons/icon/${encodeURIComponent(iconName)}`);
+                const response = await fetch(`/cloudcake-icons/icon/${encodeURIComponent(iconName)}`);
 
                 if (response.ok) {
                     const svg = await response.text();

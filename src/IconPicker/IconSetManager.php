@@ -1,6 +1,6 @@
 <?php
 
-namespace Cloudcake\Components\IconPickerIcons;
+namespace Cloudcake\Components\IconPicker;
 
 use BladeUI\Icons\Factory as IconFactory;
 use Illuminate\Support\Collection;
@@ -66,7 +66,7 @@ class IconSetManager
      */
     public function getIcons(): Collection
     {
-        $cacheKey = 'toolkit:icons';
+        $cacheKey = 'cloudcake:icons';
 
         return Cache::remember($cacheKey, 86400, fn() => $this->loadIcons());
     }
@@ -204,6 +204,6 @@ class IconSetManager
      */
     public function clearCache(): void
     {
-        Cache::forget('toolkit:icons');
+        Cache::forget('cloudcake:icons');
     }
 }

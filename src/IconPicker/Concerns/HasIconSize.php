@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Cloudcake\Components\IconPickerIcons\Concerns;
+namespace Cloudcake\Components\IconPicker\Concerns;
 
 use Closure;
 

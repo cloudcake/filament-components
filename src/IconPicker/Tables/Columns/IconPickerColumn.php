@@ -1,12 +1,12 @@
 <?php
 
-namespace Cloudcake\Components\IconPickerIcons\Tables\Columns;
+namespace Cloudcake\Components\IconPicker\Tables\Columns;
 
 use Closure;
 use Filament\Tables\Columns\Column;
-use Cloudcake\Components\IconPickerIcons\Concerns\HasIconAnimation;
-use Cloudcake\Components\IconPickerIcons\Concerns\HasIconColor;
-use Cloudcake\Components\IconPickerIcons\Concerns\HasIconSize;
+use Cloudcake\Components\IconPicker\Concerns\HasIconAnimation;
+use Cloudcake\Components\IconPicker\Concerns\HasIconColor;
+use Cloudcake\Components\IconPicker\Concerns\HasIconSize;
 
 class IconPickerColumn extends Column
 {
@@ -14,7 +14,7 @@ class IconPickerColumn extends Column
     use HasIconColor;
     use HasIconSize;
 
-    protected string $view = 'toolkit::tables.columns.icon-column';
+    protected string $view = 'cloudcake-components::tables.columns.icon-column';
 
     protected bool|Closure $showLabel = false;
 

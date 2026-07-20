@@ -18,5 +18,12 @@
     "psr-4": {
       "Cloudcake\\Components\\": "src/"
     }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Cloudcake\\Components\\ServiceProvider"
+      ]
+    }
   }
 }

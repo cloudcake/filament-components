@@ -1,48 +1,50 @@
 @import '../../vendor/filament/filament/resources/css/theme.css';
 
-.toolkit-icons {
+@source '../views/**/*.php';
+
+.cloudcake-icons {
     @apply relative;
 }
 
-.toolkit-icons-trigger {
+.cloudcake-icons-trigger {
     @apply min-h-[42px];
 }
 
-.toolkit-icons-modal {
+.cloudcake-icons-modal {
     animation: modal-appear 0.35s ease-out;
 }
 
-.toolkit-icons-modal .overflow-y-auto {
+.cloudcake-icons-modal .overflow-y-auto {
     scrollbar-width: thin;
     scrollbar-color: theme('colors.gray.300') transparent;
 }
 
-.toolkit-icons-modal .overflow-y-auto::-webkit-scrollbar {
+.cloudcake-icons-modal .overflow-y-auto::-webkit-scrollbar {
     width: 6px;
 }
 
-.toolkit-icons-modal .overflow-y-auto::-webkit-scrollbar-track {
+.cloudcake-icons-modal .overflow-y-auto::-webkit-scrollbar-track {
     background: transparent;
 }
 
-.toolkit-icons-modal .overflow-y-auto::-webkit-scrollbar-thumb {
+.cloudcake-icons-modal .overflow-y-auto::-webkit-scrollbar-thumb {
     background-color: theme('colors.gray.300');
     border-radius: 3px;
 }
 
-.dark .toolkit-icons-modal .overflow-y-auto {
+.dark .cloudcake-icons-modal .overflow-y-auto {
     scrollbar-color: theme('colors.gray.600') transparent;
 }
 
-.dark .toolkit-icons-modal .overflow-y-auto::-webkit-scrollbar-thumb {
+.dark .cloudcake-icons-modal .overflow-y-auto::-webkit-scrollbar-thumb {
     background-color: theme('colors.gray.600');
 }
 
-.toolkit-icons-modal button[type="button"]:not(:disabled):hover .flex {
+.cloudcake-icons-modal button[type="button"]:not(:disabled):hover .flex {
     transform: scale(1.1);
 }
 
-.toolkit-icons .animate-shimmer {
+.cloudcake-icons .animate-shimmer {
     background: linear-gradient(
         90deg,
         theme('colors.gray.200') 0%,
@@ -53,7 +55,7 @@
     animation: shimmer 1.5s infinite;
 }
 
-.dark .toolkit-icons .animate-shimmer {
+.dark .cloudcake-icons .animate-shimmer {
     background: linear-gradient(
         90deg,
         theme('colors.gray.700') 0%,

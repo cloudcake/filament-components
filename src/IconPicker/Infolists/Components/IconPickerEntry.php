@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Cloudcake\Components\IconPickerIcons\Infolists\Components;
+namespace Cloudcake\Components\IconPicker\Infolists\Components;
 
 use Closure;
 use Filament\Infolists\Components\Entry;
-use Cloudcake\Components\IconPickerIcons\Concerns\HasIconAnimation;
-use Cloudcake\Components\IconPickerIcons\Concerns\HasIconColor;
-use Cloudcake\Components\IconPickerIcons\Concerns\HasIconSize;
+use Cloudcake\Components\IconPicker\Concerns\HasIconAnimation;
+use Cloudcake\Components\IconPicker\Concerns\HasIconColor;
+use Cloudcake\Components\IconPicker\Concerns\HasIconSize;
 
 class IconPickerEntry extends Entry
 {
@@ -16,7 +16,7 @@ class IconPickerEntry extends Entry
     use HasIconColor;
     use HasIconSize;
 
-    protected string $view = 'toolkit::infolists.components.icon-entry';
+    protected string $view = 'cloudcake-components::infolists.components.icon-entry';
 
     protected bool|Closure $showIconName = true;
 
