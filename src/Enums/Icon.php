@@ -1,10 +1,10 @@
 <?php
 
-namespace Cloudcake\Components\IconPicker\Enums;
+namespace Cloudcake\Components\Enums;
 
 use Filament\Support\Contracts\ScalableIcon;
 use Filament\Support\Enums\IconSize;
-use Cloudcake\Components\IconPicker\IconSetManager;
+use Cloudcake\Components\IconSetManager;
 
 /**
  * Dynamic Icon helper that can represent any icon from any installed set.

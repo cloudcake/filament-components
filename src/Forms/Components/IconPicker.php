@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Cloudcake\Components\IconPicker\Forms\Components;
+namespace Cloudcake\Components\Forms\Components;
 
 use Closure;
 use Filament\Forms\Components\Field;
-use Cloudcake\Components\IconPicker\IconSetManager;
+use Cloudcake\Components\IconSetManager;
 
 class IconPicker extends Field
 {

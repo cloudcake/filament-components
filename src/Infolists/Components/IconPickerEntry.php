@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Cloudcake\Components\IconPicker\Infolists\Components;
+namespace Cloudcake\Components\Infolists\Components;
 
 use Closure;
 use Filament\Infolists\Components\Entry;
-use Cloudcake\Components\IconPicker\Concerns\HasIconAnimation;
-use Cloudcake\Components\IconPicker\Concerns\HasIconColor;
-use Cloudcake\Components\IconPicker\Concerns\HasIconSize;
+use Cloudcake\Components\Concerns\HasIconAnimation;
+use Cloudcake\Components\Concerns\HasIconColor;
+use Cloudcake\Components\Concerns\HasIconSize;
 
 class IconPickerEntry extends Entry
 {

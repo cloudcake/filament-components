@@ -1,6 +1,6 @@
 <?php
 
-namespace Cloudcake\Components\IconPicker\Enums;
+namespace Cloudcake\Components\Enums;
 
 use Filament\Support\Contracts\ScalableIcon;
 use Filament\Support\Enums\IconSize;

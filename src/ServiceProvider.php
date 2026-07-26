@@ -2,7 +2,7 @@
 
 namespace Cloudcake\Components;
 
-use Cloudcake\Components\IconPicker\IconSetManager;
+use Cloudcake\Components\IconSetManager;
 
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {

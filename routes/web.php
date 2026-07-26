@@ -1,7 +1,7 @@
 <?php
 
-use Cloudcake\Components\IconPicker\Http\Controllers\IconController;
-use Cloudcake\Components\IconPicker\Http\Controllers\IconSvgController;
+use Cloudcake\Components\Http\Controllers\IconController;
+use Cloudcake\Components\Http\Controllers\IconSvgController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware(['web'])->group(function () {

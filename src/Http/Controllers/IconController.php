@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Cloudcake\Components\IconPicker\Http\Controllers;
+namespace Cloudcake\Components\Http\Controllers;
 
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
-use Cloudcake\Components\IconPicker\IconSetManager;
+use Cloudcake\Components\IconSetManager;
 
 class IconController extends Controller
 {

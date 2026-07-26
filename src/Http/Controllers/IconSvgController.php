@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Cloudcake\Components\IconPicker\Http\Controllers;
+namespace Cloudcake\Components\Http\Controllers;
 
 use BladeUI\Icons\Factory as IconFactory;
 use Illuminate\Http\Response;

@@ -1,12 +1,12 @@
 <?php
 
-namespace Cloudcake\Components\IconPicker\Tables\Columns;
+namespace Cloudcake\Components\Tables\Columns;
 
 use Closure;
 use Filament\Tables\Columns\Column;
-use Cloudcake\Components\IconPicker\Concerns\HasIconAnimation;
-use Cloudcake\Components\IconPicker\Concerns\HasIconColor;
-use Cloudcake\Components\IconPicker\Concerns\HasIconSize;
+use Cloudcake\Components\Concerns\HasIconAnimation;
+use Cloudcake\Components\Concerns\HasIconColor;
+use Cloudcake\Components\Concerns\HasIconSize;
 
 class IconPickerColumn extends Column
 {
