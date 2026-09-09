@@ -10,7 +10,7 @@ use Cloudcake\Components\IconSetManager;
 
 class IconPicker extends Field
 {
-    protected string $view = 'cloudcake-components::forms.components.icon-picker';
+    protected string $view = 'cloudcake-components::forms.icon-picker';
     protected array|Closure|null $allowedSets = null;
     protected string|Closure|null $placeholder = null;
     protected bool|Closure $searchable = true;

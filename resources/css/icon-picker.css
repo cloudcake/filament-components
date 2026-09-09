@@ -44,6 +44,30 @@
     transform: scale(1.1);
 }
 
+.fi-input.fi-icon-picker {
+    @apply block w-full bg-gray-50 rounded-4xl py-2 pe-3 ps-10 text-sm text-gray-950 ring-1 ring-inset ring-gray-950/10 transition duration-75 placeholder:text-gray-400 focus:bg-white focus:ring-2 focus:ring-inset focus:ring-primary-600 dark:bg-white/5 dark:text-white dark:ring-white/20 dark:placeholder:text-gray-500 dark:focus:bg-white/10 dark:focus:ring-primary-500;
+}
+
+.fi-fo-icon-picker-btn {
+    @apply flex min-h-9 items-center gap-x-2 rounded-lg py-1.5 ps-3 pe-3 text-start text-sm leading-6 text-gray-950 focus:ring-0 focus:outline-none dark:text-white;
+}
+
+.fi-icon-picker-modal-content {
+    @apply pointer-events-auto relative flex w-full cursor-default flex-col bg-white shadow-xl ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10 rounded-xl max-h-[90vh];
+}
+
+.fi-icon-picker-heading {
+    @apply text-base font-semibold leading-6 text-gray-950 dark:text-white;
+}
+
+.fi-icon-picker-description {
+    @apply text-sm text-gray-500 dark:text-gray-400;
+}
+
+.fi-icon-picker-btn-cancel {
+    @apply relative grid-flow-col items-center justify-center font-semibold outline-none transition duration-75 focus-visible:ring-2 rounded-lg gap-1.5 px-3 py-2 text-sm inline-grid bg-white text-gray-950 hover:bg-gray-50 dark:bg-white/5 dark:text-white dark:hover:bg-white/10 ring-1 ring-gray-950/10 dark:ring-white/20;
+}
+
 .cloudcake-icons .animate-shimmer {
     background: linear-gradient(
         90deg,
@@ -63,6 +87,7 @@
         theme('colors.gray.700') 100%
     );
 }
+
 
 @keyframes modal-appear {
     from {

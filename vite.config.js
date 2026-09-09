@@ -7,7 +7,9 @@ export default defineConfig({
         rollupOptions: {
             input: [
                 'resources/css/icon-picker.css',
+                'resources/css/mermaid.css',
                 'resources/js/icon-picker.js',
+                'resources/js/svg-pan-zoom.js',
             ],
             output: {
                 entryFileNames: 'js/[name].js',

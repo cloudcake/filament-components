@@ -16,7 +16,7 @@ class IconPickerEntry extends Entry
     use HasIconColor;
     use HasIconSize;
 
-    protected string $view = 'cloudcake-components::infolists.components.icon-entry';
+    protected string $view = 'cloudcake-components::infolists.icon-entry';
 
     protected bool|Closure $showIconName = true;
 

@@ -3,6 +3,9 @@
 namespace Cloudcake\Components;
 
 use Cloudcake\Components\IconSetManager;
+use Filament\Support\Assets\Css;
+use Filament\Support\Assets\Js;
+use Filament\Support\Facades\FilamentAsset;
 
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {
@@ -24,6 +27,12 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
         $this->publishes([
             __DIR__ . '/../resources/audio' => public_path('audio'),
         ], 'audio');
+
+        FilamentAsset::register([
+            Css::make('icon-picker', __DIR__ . '/../resources/dist/css/icon-picker.css'),
+            Css::make('mermaid', __DIR__ . '/../resources/dist/css/mermaid.css'),
+            Js::make('svg-pan-zoom', __DIR__ . '/../resources/dist/js/svg-pan-zoom.js'),
+        ], package: 'cloudcake-components');
     }
 
     private function bootLanguage(): void

@@ -1,0 +1,119 @@
+.mermaid-field-container {
+    position: relative;
+}
+
+.mermaid-field-container .mermaid-render {
+    overflow: hidden;
+    min-height: 400px;
+    max-height: 800px;
+    transition: border-color 0.2s ease-in-out;
+    padding: 20px 10px;
+}
+
+.dark .mermaid-field-container .mermaid-render {
+}
+
+.mermaid-field-container .mermaid-render:focus-within {
+    border-color: var(--color-primary-500, #3b82f6);
+    box-shadow: 0 0 0 1px var(--color-primary-500, #3b82f6);
+}
+
+.mermaid-field-container .mermaid-render svg {
+    width: 100% !important;
+    height: 400px !important;
+    max-height: 700px;
+}
+
+.mermaid-field-container .svg-pan-zoom-controls {
+    position: absolute !important;
+    top: 10px !important;
+    right: 10px !important;
+    background: rgba(255, 255, 255, 0.9) !important;
+    border-radius: var(--radius-md, 0.375rem) !important;
+    padding: 0.25rem !important;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05) !important;
+}
+
+.dark .mermaid-field-container .svg-pan-zoom-controls {
+    background: rgba(31, 41, 55, 0.9) !important;
+}
+
+.mermaid-field-container .svg-pan-zoom-controls svg {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+.mermaid-layout-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.mermaid-layout-vertical .mermaid-editor-section,
+.mermaid-layout-vertical .mermaid-preview-section {
+    flex: 1;
+    min-height: 400px;
+}
+
+.mermaid-layout-horizontal {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    align-items: stretch;
+}
+
+.mermaid-layout-horizontal .mermaid-editor-section,
+.mermaid-layout-horizontal .mermaid-preview-section {
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
+    height: 100%;
+}
+
+.mermaid-layout-horizontal .mermaid-render {
+    flex: 1;
+    height: 100%;
+    min-height: 400px;
+    max-height: none;
+}
+
+.mermaid-editor-section {
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.mermaid-editor-section .fi-fo-textarea {
+    min-height: 400px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.mermaid-editor-section textarea {
+    min-height: 400px !important;
+    flex: 1;
+    resize: vertical;
+}
+
+g.main rect.background {
+    fill: transparent !important;
+}
+
+@media (max-width: 768px) {
+    .mermaid-layout-horizontal {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .mermaid-field-container .mermaid-render {
+        max-height: 300px;
+    }
+
+    .mermaid-field-container .svg-pan-zoom-controls {
+        top: 5px !important;
+        right: 5px !important;
+        padding: 0.125rem !important;
+    }
+}

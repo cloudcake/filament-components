@@ -219,7 +219,7 @@
         <x-filament::input.wrapper :disabled="$isDisabled" :valid="!$errors->has($statePath)" class="fi-fo-icon-picker-trigger cursor-pointer"
             x-on:click="openModal()">
             <button type="button" x-on:click="openModal()" @disabled($isDisabled)
-                class="flex min-h-9 items-center gap-x-2 rounded-lg py-1.5 ps-3 pe-3 text-start text-sm leading-6 text-gray-950 focus:ring-0 focus:outline-none dark:text-white">
+                class="fi-fo-icon-picker-btn">
                 {{-- Selected Icon Preview --}}
                 <template x-if="state">
                     <span class="fi-icon-picker-preview shrink-0" x-init="$watch('state', async (value) => {
@@ -286,14 +286,14 @@
                     x-transition:leave="ease-in duration-200"
                     x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
                     x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-on:click.stop
-                    class="fi-modal-window pointer-events-auto relative flex w-full cursor-default flex-col bg-white shadow-xl ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10 rounded-xl max-h-[90vh]"
+                    class="fi-modal-window fi-icon-picker-modal-content"
                     style="max-width: {{ $modalSize }};">
                     {{-- Header --}}
                     <div class="fi-modal-header flex items-center justify-between gap-x-4 px-6 pt-6 pb-4">
                         <div class="flex flex-col">
-                            <h2 class="fi-modal-heading text-base font-semibold leading-6 text-gray-950 dark:text-white"
+                            <h2 class="fi-modal-heading fi-icon-picker-heading"
                                 x-text="translations.selectIcon"></h2>
-                            <p class="fi-modal-description text-sm text-gray-500 dark:text-gray-400">
+                            <p class="fi-modal-description fi-icon-picker-description">
                                 <span x-text="totalIcons"></span> <span x-text="translations.iconsAvailable"></span>
                             </p>
                         </div>
@@ -322,7 +322,7 @@
                                 </div>
                                 <input type="text" x-ref="searchInput" x-model="search" x-on:input="handleSearchInput()"
                                     x-bind:placeholder="translations.searchPlaceholder"
-                                    class="fi-input fi-iconpicker block w-full rounded-lg border-none bg-gray-50 py-2 pe-3 ps-10 text-sm text-gray-950 ring-1 ring-inset ring-gray-950/10 transition duration-75 placeholder:text-gray-400 focus:bg-white focus:ring-2 focus:ring-inset focus:ring-primary-600 dark:bg-white/5 dark:text-white dark:ring-white/20 dark:placeholder:text-gray-500 dark:focus:bg-white/10 dark:focus:ring-primary-500" />
+                                    class="fi-input fi-icon-picker" />
                             </div>
                         </div>
                     </div>
@@ -388,7 +388,7 @@
                     <div
                         class="fi-modal-footer flex items-center justify-end gap-x-3 px-6 py-4 border-t border-gray-100 dark:border-white/5">
                         <button type="button" x-on:click="closeModal()"
-                            class="fi-btn relative grid-flow-col items-center justify-center font-semibold outline-none transition duration-75 focus-visible:ring-2 rounded-lg fi-color-gray fi-btn-color-gray fi-size-md fi-btn-size-md gap-1.5 px-3 py-2 text-sm inline-grid bg-white text-gray-950 hover:bg-gray-50 dark:bg-white/5 dark:text-white dark:hover:bg-white/10 ring-1 ring-gray-950/10 dark:ring-white/20">
+                            class="fi-btn fi-icon-picker-btn-cancel fi-color-gray fi-btn-color-gray fi-size-md fi-btn-size-md">
                             <span x-text="translations.cancel"></span>
                         </button>
                     </div>
