@@ -44,10 +44,10 @@
 
             applyTheme() {
                 this.mermaid.initialize({
-                    startOnLoad: false,
+                    startOnLoad: true,
                     theme: this.isDark ? '{{ $getDarkTheme()->value }}' : '{{ $getTheme()->value }}',
                     look: 'neo',
-                    htmlLabels: true,
+                    htmlLabels: false,
                     flowchat: {
                         curve: 'linear'
                     },
@@ -80,16 +80,16 @@
                 svgPanZoom('#' + svgId, {
                       viewportSelector: '.mermaid-preview-section'
                     , panEnabled: {{ \Illuminate\Support\Js::from($allowsPanning()) }}
-                    , controlIconsEnabled: false
+                    , controlIconsEnabled: true
                     , zoomEnabled: {{ \Illuminate\Support\Js::from($allowsZooming()) }}
                     , dblClickZoomEnabled: true
-                    , mouseWheelZoomEnabled: true
+                    , mouseWheelZoomEnabled: false
                     , preventMouseEventsDefault: true
                     , zoomScaleSensitivity: 0.2
                     , minZoom: 0.5
                     , maxZoom: 10
-                    , fit: false
-                    , contain: false
+                    , fit: true
+                    , contain: true
                     , center: true
                     , refreshRate: 'auto'
                 });
