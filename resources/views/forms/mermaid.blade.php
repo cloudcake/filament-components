@@ -77,6 +77,7 @@
                 this.mermaid.initialize({
                     startOnLoad: true,
                     theme: this.isDark ? '{{ $getDarkTheme() }}' : '{{ $getTheme() }}',
+                    htmlLabels: false,
                 })
             },
 
@@ -101,18 +102,7 @@
             },
         }"
     >
-        <div class="mb-3 flex items-center justify-between">
-            <x-filament::button
-                type="button"
-                size="xs"
-                color="gray"
-                x-on:click="parallel = ! parallel"
-            >
-                <span x-text="toggleLabel"></span>
-            </x-filament::button>
-        </div>
-
-        <div :class="parallel ? 'mermaid-layout-horizontal' : 'mermaid-layout-vertical'">
+        <div class="mermaid-layout-vertical">
             <div class="mermaid-editor-section" x-ref="editor">
                 <x-filament::input.wrapper
                     :disabled="$isDisabled"

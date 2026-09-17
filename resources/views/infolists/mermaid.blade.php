@@ -44,16 +44,9 @@
 
             applyTheme() {
                 this.mermaid.initialize({
-                    startOnLoad: true,
+                    startOnLoad: false,
                     theme: this.isDark ? '{{ $getDarkTheme()->value }}' : '{{ $getTheme()->value }}',
-                    look: 'neo',
                     htmlLabels: false,
-                    flowchat: {
-                        curve: 'linear'
-                    },
-                    sequence: {
-                        mirrorActors: true
-                    }
                 })
             },
 
@@ -76,14 +69,13 @@
                     preview.textContent = this.strings.renderError + ' ' + error.message
                 }
 
-                @if ($allowsPanning() || $allowsZooming())
                 svgPanZoom('#' + svgId, {
-                      viewportSelector: '.mermaid-preview-section'
+                      viewportSelector: '.mermaid-render'
                     , panEnabled: {{ \Illuminate\Support\Js::from($allowsPanning()) }}
-                    , controlIconsEnabled: true
+                    , controlIconsEnabled: false
                     , zoomEnabled: {{ \Illuminate\Support\Js::from($allowsZooming()) }}
                     , dblClickZoomEnabled: true
-                    , mouseWheelZoomEnabled: false
+                    , mouseWheelZoomEnabled: true
                     , preventMouseEventsDefault: true
                     , zoomScaleSensitivity: 0.2
                     , minZoom: 0.5
@@ -93,7 +85,6 @@
                     , center: true
                     , refreshRate: 'auto'
                 });
-                @endif
             },
         }"
     >
